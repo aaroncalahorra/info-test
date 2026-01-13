@@ -1,0 +1,25 @@
+{
+    "name": "Informatica 7-8 2026",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.quickSuggestions": { "other": "off", "comments": "off", "strings": "off" },
+                "editor.suggestOnTriggerCharacters": false,
+                "editor.wordBasedSuggestions": "off",
+                "editor.acceptSuggestionOnEnter": "off",
+                "editor.parameterHints.enabled": false,
+                "html.suggest.html5": false,
+                "css.validate": true,
+                "javascript.suggest.enabled": false,
+
+                "github.copilot.enable": { "*": false },
+                "github.copilot.editor.enableAutoCompletions": false,
+                "editor.inlineSuggest.enabled": false
+            },
+            "extensions": [
+                "ritwickdey.LiveServer" // Adds a "Go Live" button for easy previewing
+            ]
+        }
+    }
+}
