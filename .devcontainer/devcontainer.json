@@ -1,24 +1,39 @@
 {
-    "name": "Informatica 7-8 2026",
+    "name": "Informatica 7-8 Codespaces Setup",
     "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
     "customizations": {
         "vscode": {
             "settings": {
-                "editor.quickSuggestions": { "other": "off", "comments": "off", "strings": "off" },
+                // --- DISABLE AI CHAT & UI ELEMENTS ---
+                "github.copilot.chat.enable": false,
+                "github.copilot.editor.enableCodeActions": false,
+                "chat.editing.alwaysPromptForConfirmation": true,
+                "scm.showChatButton": false, // Removes chat from Source Control
+                "workbench.layoutControl.enabled": false, // Simplifies UI
+                "window.commandCenter": false, // Removes the top AI search bar
+
+                // --- DISABLE AUTOCOMPLETE ---
+                "editor.quickSuggestions": { 
+                    "other": "off", 
+                    "comments": "off", 
+                    "strings": "off" 
+                },
                 "editor.suggestOnTriggerCharacters": false,
                 "editor.wordBasedSuggestions": "off",
                 "editor.acceptSuggestionOnEnter": "off",
                 "editor.parameterHints.enabled": false,
                 "html.suggest.html5": false,
-                "css.validate": true,
                 "javascript.suggest.enabled": false,
 
-                "github.copilot.enable": { "*": false },
+                // --- DISABLE COPILOT GHOST TEXT ---
+                "github.copilot.enable": { 
+                    "*": false 
+                },
                 "github.copilot.editor.enableAutoCompletions": false,
                 "editor.inlineSuggest.enabled": false
             },
             "extensions": [
-                "ritwickdey.LiveServer" // Adds a "Go Live" button for easy previewing
+                "ritwickdey.LiveServer"
             ]
         }
     }
